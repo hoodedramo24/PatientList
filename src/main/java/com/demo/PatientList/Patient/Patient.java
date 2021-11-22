@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -15,7 +16,7 @@ public class Patient {
     private Long ID;
     private String firstName;
     private String lastName;
-    private Date dateOfBirth;
+    private LocalDate dateOfBirth;
     private int socialSecurityNumber;
     private String streetAddress;
     private String city;
@@ -34,7 +35,7 @@ public class Patient {
 
     public Patient(String firstName,
                    String lastName,
-                   Date dateOfBirth,
+                   LocalDate dateOfBirth,
                    int socialSecurityNumber,
                    String streetAddress,
                    String city,
@@ -77,7 +78,7 @@ public class Patient {
         return lastName;
     }
 
-    public Date getDateOfBirth() {
+    public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
 
@@ -138,7 +139,7 @@ public class Patient {
         this.lastName = lastName;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 

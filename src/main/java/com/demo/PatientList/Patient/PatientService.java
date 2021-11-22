@@ -38,7 +38,7 @@ public class PatientService {
         if (patientRepository.existsById(id)){
             return patientRepository.findById(id);
         }
-        return null;
+        return Optional.empty();
     }
 
     public void deletePatientByID(long id){
